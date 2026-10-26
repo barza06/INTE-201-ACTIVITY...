@@ -23,15 +23,15 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("==== CLASS RANKING SYSTEM ====");
+        System.out.println("============== CLASS RANKING SYSTEM ==============");
 //class ranking system name and scores
-        String[] names = {"Mike", "Jheric", "Aldous", "Elgave", "Yo"};
+        String[] names = {"Mike", "Jheric", "Aldous", "Elgave", "Yohanze"};
         int[][] rawQuizData = {
             {86, 95, 89, 92},//Mike
-            {80, 75, 90, 78},//Jheric
+            {90, 95, 90, 78},//Jheric
             {93, 92, 96, 99}, //Aldous
             {75, 90, 88, 92}, //Elgave
-            {90, 75, 79, 88} //Yo
+            {90, 75, 79, 88} //Yohanze
         };
  // Build an array of Student objects from raw data
         Student[] students = new Student[names.length];
@@ -49,9 +49,9 @@ public class Main {
             }
         }
 // Printing the leaderboard with proper tie handling
-        System.out.println("\n ===== CLASS LEADERBOARD ====");
-        System.out.printf("%-6s | %-14s | %-8s\n", "Rank", "Student Name", "Average");
-        System.out.println("---------------------------------------");
+        System.out.println("\n ============== CLASS LEADERBOARD ==============");
+        System.out.println("Rank\t|\tStudent Name\t|\tAverage");
+        System.out.println("========================================================");
 // Handling if current average equals to the others students
         int displayRank = 1;
         for (int i = 0; i < students.length; i++) {
@@ -60,17 +60,17 @@ public class Main {
                 displayRank = i + 1;
             }
 
-            System.out.printf("%-6d | %-14s | %-8.2f\n", displayRank, students[i].name, students[i].average);
+            System.out.println(displayRank + "\t\t|\t" + students[i].name + "\t\t|\t" + students[i].average);
         }
 
         // Use custom linear search to find a student's rank by name
         String targetStudent = "Jheric";
         int found = findStudentRank(students, targetStudent);
 
-        System.out.println("\n==== SEARCH RESULT ======");
+        System.out.println("\n============== SEARCH RESULT ==============");
             // Determine rank based on the highest grade
         if (found != -1) {
-            System.out.println("Student '" + targetStudent + "' in Leaderboard Rank: " + found);
+            System.out.println("Student '" + targetStudent + "' : Leaderboard Rank: " + found);
         } else {
             System.out.println("Student '" + targetStudent + "' was not found.");
         }

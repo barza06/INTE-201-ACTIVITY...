@@ -24,7 +24,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("==== CLASS RANKING SYSTEM ====");
-
+//class ranking system name and scores
         String[] names = {"Mike", "Jheric", "Aldous", "Elgave", "Yo"};
         int[][] rawQuizData = {
             {86, 95, 89, 92},//Mike
@@ -75,7 +75,7 @@ public class Main {
             System.out.println("Student '" + targetStudent + "' was not found.");
         }
     }
-
+//Printing the Ranking of the student based on the grades on quizzes
     public static int findStudentRank(Student[] students, String targetName) {
         for (int i = 0; i < students.length; i++) {
             if (students[i].name.equalsIgnoreCase(targetName)) {
@@ -86,6 +86,6 @@ public class Main {
                 }
             }
         }
-        return -1;
+        return -1;//return
     }
 }

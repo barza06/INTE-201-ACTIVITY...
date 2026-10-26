@@ -27,11 +27,11 @@ public class Main {
 
         String[] names = {"Mike", "Jheric", "Aldous", "Elgave", "Yo"};
         int[][] rawQuizData = {
-            {85, 90, 88, 92},
-            {70, 75, 80, 78},
-            {95, 92, 96, 98},
-            {85, 90, 88, 92},
-            {60, 65, 70, 68}
+            {86, 95, 89, 92},//Mike
+            {80, 75, 90, 78},//Jheric
+            {93, 92, 96, 99}, //Aldous
+            {75, 90, 88, 92}, //Elgave
+            {90, 75, 79, 88} //Yo
         };
  // Build an array of Student objects from raw data
         Student[] students = new Student[names.length];
